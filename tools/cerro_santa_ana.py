@@ -164,14 +164,17 @@ for i in range(34):
 for x, y, s in [(560, 70, 1.0), (618, 104, 0.8), (690, 58, 0.9), (760, 120, 0.7), (250, 92, 0.75)]:
     bird(x, y, s)
 
-# Nuria on the malecón, waving
-nx, ny = 700, WATER - 5
-path(f"M{nx} {ny - 34} C{nx} {ny - 34} {nx - 13} {ny - 18} {nx - 13} {ny - 10} a13 13 0 0 0 26 0 C{nx + 13} {ny - 18} {nx} {ny - 34} {nx} {ny - 34} Z", CREAM)
-circle(nx - 4.5, ny - 11, 1.6, BG)
-circle(nx + 4.5, ny - 11, 1.6, BG)
-path(f"M{nx - 3} {ny - 6} q3 2.6 6 0", stroke=BG, width=1.4)
-path(f"M{nx + 12} {ny - 15} q6 -4 6 -11", stroke=CREAM, width=2.2)
+# Nuria, a long-billed bird with a crest, perched on the malecón
+nx, ny = 688, WATER - 5
+path(f"M{nx - 10} {ny - 4} l-10 7 l4 2 l10 -5 Z", CREAM)
+path(f"M{nx - 10} {ny - 3} C{nx - 14} {ny - 13} {nx - 10} {ny - 25} {nx} {ny - 27} C{nx + 8} {ny - 28} {nx + 12} {ny - 21} {nx + 11} {ny - 13} C{nx + 10} {ny - 5} {nx + 2} {ny + 1} {nx - 10} {ny - 3} Z", CREAM)
+circle(nx + 5, ny - 33, 7, CREAM)
+path(f"M{nx} {ny - 38} l-7 -8 l10 5 Z M{nx + 3} {ny - 39} l-3 -9 l7 7 Z", CREAM)
+path(f"M{nx + 11} {ny - 34} L{nx + 31} {ny - 27} L{nx + 11} {ny - 31} Z", CREAM)
+circle(nx + 7, ny - 34, 1.5, BG)
+path(f"M{nx - 8} {ny - 12} q6 -7 15 -5", stroke=BG, width=1.3, extra=' opacity="0.55"')
+path(f"M{nx - 2} {ny - 2} V{ny} M{nx + 3} {ny - 3} V{ny}", stroke=CREAM, width=1.6)
 
-print(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" role="img" aria-label="Ilustración del Cerro Santa Ana con el faro, las casas de Las Peñas, el malecón, el río Guayas y el manglar bajo un aguacero">')
+print(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" role="img" aria-label="Ilustración del Cerro Santa Ana con el faro, las casas de Las Peñas, el malecón con Nuria, el río Guayas y el manglar bajo un aguacero">')
 print("\n".join(out))
 print("</svg>")
