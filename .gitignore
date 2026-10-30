@@ -2,3 +2,4 @@
 reference/
 .herenow/
 node_modules/
+.wrangler/

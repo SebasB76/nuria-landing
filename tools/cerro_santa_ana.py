@@ -1,6 +1,6 @@
 """Draws the Cerro Santa Ana illustration used in the landing page.
 
-Run: python3 tools/cerro_santa_ana.py > assets/img/cerro-santa-ana.svg
+Run: python3 tools/cerro_santa_ana.py > site/assets/img/cerro-santa-ana.svg
 """
 
 import math
