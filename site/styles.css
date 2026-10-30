@@ -519,9 +519,10 @@ button {
   color: var(--khaki-200);
 }
 
-.emblem svg {
-  width: 44px;
-  height: 44px;
+.emblem img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
 }
 
 /* split: text panel + painting */
@@ -970,6 +971,14 @@ button {
   gap: 18px;
 }
 
+.assistant-portrait {
+  width: clamp(112px, 10vw, 152px);
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--cream-line), 0 24px 48px -24px rgb(0 0 0 / 0.7);
+}
+
 .assistant-text .label {
   margin-bottom: -4px;
 }
@@ -1027,6 +1036,7 @@ button {
 .avatar {
   width: 40px;
   height: 40px;
+  border-radius: 50%;
 }
 
 .chat-head strong {
