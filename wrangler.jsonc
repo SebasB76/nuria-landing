@@ -1,0 +1,8 @@
+{
+  "name": "nuria-landing",
+  "compatibility_date": "2026-10-23",
+  // static site only: everything Cloudflare serves lives in site/
+  "assets": {
+    "directory": "./site"
+  }
+}
