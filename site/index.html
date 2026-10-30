@@ -26,10 +26,14 @@
   <svg class="sprite" aria-hidden="true">
     <defs>
       <clipPath id="drop-clip"><path d="M20 2C20 2 4 19 4 30a16 16 0 0 0 32 0C36 19 20 2 20 2Z"/></clipPath>
+      <mask id="mark-eye" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><circle cx="20.5" cy="25" r="2.6" fill="#000"/></mask>
     </defs>
-    <symbol id="mark" viewBox="0 0 40 48">
-      <path clip-path="url(#drop-clip)" d="M-2 31q5.5-3.5 11 0t11 0 11 0 11 0V50H-2Z" fill="currentColor"/>
-      <path d="M20 2C20 2 4 19 4 30a16 16 0 0 0 32 0C36 19 20 2 20 2Z" fill="none" stroke="currentColor" stroke-width="2.4"/>
+    <symbol id="mark" viewBox="0 0 48 48">
+      <g mask="url(#mark-eye)">
+        <path d="M17 4S5 18 5 29a12 12 0 0 0 24 0C29 18 17 4 17 4Z" fill="currentColor"/>
+        <path d="M16 9Q11 4.5 5.5 5q4.5 3 7 9Z" style="fill: var(--mark-crest, currentColor)"/>
+        <path d="M27.6 24.4 46 32.2 27 29.6Z" fill="currentColor"/>
+      </g>
     </symbol>
     <symbol id="arrow-down" viewBox="0 0 16 16"><path d="M8 3v10M3.5 8.5 8 13l4.5-4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="arrow-right" viewBox="0 0 16 16"><path d="M3 8h10M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
@@ -57,7 +61,7 @@
         <li><a href="#invierno">El invierno 2026</a></li>
         <li><a href="#distinto">Por qué Nuria</a></li>
         <li><a href="#como-funciona">Cómo funciona</a></li>
-        <li><a href="#nuria">Habla con Nuria</a></li>
+        <li><a href="#nuria">Conoce a Nuria</a></li>
         <li><a href="#ruta">Ruta y familia</a></li>
         <li><a href="#datos">Los datos</a></li>
         <li><a href="#probar">Pruébala</a></li>
@@ -82,7 +86,7 @@
       <div class="wrap">
         <p class="statement reveal">Este invierno llueve como pocas veces. En septiembre y octubre, Guayaquil ya recibió 2 de cada 3 partes de la lluvia de un invierno normal completo. Y la temporada de lluvias, de enero a abril, todavía no empieza.</p>
         <p class="statement reveal">Nuria mira el cielo, el río y tu calle por ti, y te dice en palabras simples qué hacer y a qué hora.</p>
-        <p class="emblem reveal"><span>Te avisa</span> <img src="assets/img/nuria-avatar-192.webp" width="56" height="56" alt="Nuria"> <span>antes</span></p>
+        <p class="emblem reveal"><span>Te avisa</span> <img src="assets/img/nuria-head-288.webp" width="56" height="56" alt="Nuria"> <span>antes</span></p>
       </div>
     </section>
 
@@ -226,11 +230,13 @@
 
     <section class="assistant" id="nuria">
       <div class="wrap assistant-grid">
+        <figure class="assistant-art reveal">
+          <img src="assets/img/nuria-portrait-960.webp" width="960" height="960" loading="lazy" decoding="async" alt="Nuria, un ave verde azulada de pico largo, bajo la lluvia frente al mar.">
+        </figure>
         <div class="assistant-text">
-          <img class="assistant-portrait" src="assets/img/nuria-avatar-480.webp" width="152" height="152" loading="lazy" decoding="async" alt="Nuria: un pájaro turquesa y amarillo de pico largo, bajo la lluvia.">
-          <p class="label">Tu asistente</p>
+          <p class="label">Conoce a Nuria</p>
           <h2 class="title">Pregúntale a Nuria como le preguntarías a un vecino</h2>
-          <p>Nuria es una asistente con inteligencia artificial. Responde con los datos de la app: el riesgo de tu barrio, la lluvia, la marea, tu ruta, tu familia y los reportes cercanos.</p>
+          <p>Nuria es la asistente con inteligencia artificial de la app. Te responde con sus datos: el riesgo de tu barrio, la lluvia, la marea, tu ruta, tu familia y los reportes cercanos.</p>
           <ul class="traits">
             <li><svg><use href="#check"/></svg>Habla simple y va al grano.</li>
             <li><svg><use href="#check"/></svg>No exagera ni te asusta.</li>
@@ -241,7 +247,7 @@
         </div>
         <div class="chat" aria-label="Conversación de ejemplo con Nuria">
           <div class="chat-head">
-            <img class="avatar" src="assets/img/nuria-avatar-192.webp" width="40" height="40" alt="">
+            <img class="avatar" src="assets/img/nuria-head-288.webp" width="40" height="40" alt="">
             <div><strong>Nuria</strong><span>Conversación de ejemplo</span></div>
           </div>
           <ol class="chat-log">

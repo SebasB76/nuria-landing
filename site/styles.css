@@ -284,9 +284,13 @@ button {
   -webkit-user-select: none;
 }
 
+.brand {
+  --mark-crest: var(--lime);
+}
+
 .brand svg {
-  width: 20px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
 }
 
 .wordmark {
@@ -971,12 +975,15 @@ button {
   gap: 18px;
 }
 
-.assistant-portrait {
-  width: clamp(112px, 10vw, 152px);
+.assistant-art {
+  max-width: 460px;
+}
+
+.assistant-art img {
+  width: 100%;
   height: auto;
-  margin-bottom: 10px;
-  border-radius: 50%;
-  box-shadow: 0 0 0 1px var(--cream-line), 0 24px 48px -24px rgb(0 0 0 / 0.7);
+  border-radius: 6px;
+  box-shadow: 0 30px 60px -30px rgb(0 0 0 / 0.7);
 }
 
 .assistant-text .label {
@@ -1103,13 +1110,17 @@ button {
 
 @media (min-width: 900px) {
   .assistant-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 64px;
-    align-items: center;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    column-gap: clamp(48px, 6vw, 96px);
+    row-gap: 56px;
+    align-items: start;
   }
 
-  .chat {
-    justify-self: end;
+  /* the portrait stays in view while the text and the sample chat scroll past it */
+  .assistant-art {
+    grid-row: 1 / span 2;
+    position: sticky;
+    top: 40px;
   }
 }
 
@@ -1329,8 +1340,8 @@ button {
 }
 
 .footer-mark {
-  width: 46px;
-  height: 56px;
+  width: 64px;
+  height: 64px;
   color: var(--khaki);
   opacity: 0.8;
 }
