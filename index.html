@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="es-EC">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Nuria · Que el aguacero no te sorprenda</title>
+  <meta name="description" content="Nuria te dice si tu calle se puede inundar hoy, a qué hora conviene salir y por dónde ir. Hecha para Guayaquil, en el invierno de El Niño 2026.">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#1d211c">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1d211c">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nuria · Que el aguacero no te sorprenda">
+  <meta property="og:description" content="Si tu calle se puede inundar hoy, a qué hora salir y por dónde ir. Para Guayaquil, en el invierno de El Niño 2026.">
+  <meta property="og:image" content="assets/img/og.jpg">
+  <meta property="og:locale" content="es_EC">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <svg class="sprite" aria-hidden="true">
+    <defs>
+      <clipPath id="drop-clip"><path d="M20 2C20 2 4 19 4 30a16 16 0 0 0 32 0C36 19 20 2 20 2Z"/></clipPath>
+    </defs>
+    <symbol id="mark" viewBox="0 0 40 48">
+      <path clip-path="url(#drop-clip)" d="M-2 31q5.5-3.5 11 0t11 0 11 0 11 0V50H-2Z" fill="currentColor"/>
+      <path d="M20 2C20 2 4 19 4 30a16 16 0 0 0 32 0C36 19 20 2 20 2Z" fill="none" stroke="currentColor" stroke-width="2.4"/>
+    </symbol>
+    <symbol id="nuria" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="32" fill="#1f4d2e"/>
+      <path d="M13 17l-2 5M53 15l-2 5M50 47l-2 5M12 46l-2 5" stroke="#ede5cc" stroke-opacity=".4" stroke-width="2" stroke-linecap="round"/>
+      <path d="M32 11S17 28 17 38.5a15 15 0 0 0 30 0C47 28 32 11 32 11Z" fill="#ede5cc"/>
+      <path d="M23.5 29c1.5-3.5 3.5-6 5.5-8" stroke="#c4d3b4" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+      <circle cx="27" cy="38" r="2.3" fill="#173f25"/>
+      <circle cx="37" cy="38" r="2.3" fill="#173f25"/>
+      <circle cx="23.5" cy="43" r="2.3" fill="#d99a84" opacity=".8"/>
+      <circle cx="40.5" cy="43" r="2.3" fill="#d99a84" opacity=".8"/>
+      <path d="M28 44q4 3.4 8 0" stroke="#173f25" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="arrow-down" viewBox="0 0 16 16"><path d="M8 3v10M3.5 8.5 8 13l4.5-4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="arrow-right" viewBox="0 0 16 16"><path d="M3 8h10M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="check" viewBox="0 0 16 16"><path d="m3.5 8.5 3 3 6-7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="satellite" viewBox="0 0 24 24"><path d="M10 9h4v6h-4zM3 10h5v4H3zM16 10h5v4h-5zM12 15v3M8 21a4 4 0 0 1 8 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="tide" viewBox="0 0 24 24"><path d="M3 9c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0M3 14c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0M3 19c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0M12 2v4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="camera" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4zM12 9.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+    <symbol id="route" viewBox="0 0 24 24"><path d="M6 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM18 9a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM6 15V9a4 4 0 0 1 4-4h2M18 9v6a4 4 0 0 1-4 4h-2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Nuria, volver al inicio"><svg><use href="#mark"/></svg></a>
+    <a class="wordmark" href="#top" tabindex="-1" aria-hidden="true">Nuria</a>
+    <button class="menu-button" type="button" aria-haspopup="dialog" aria-controls="menu" aria-label="Abrir el menú">
+      <svg viewBox="0 0 24 24"><path d="M6 17 14 7M10 17l8-10M14 17l4-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </header>
+
+  <dialog class="menu" id="menu" aria-label="Menú">
+    <button class="menu-close" type="button" aria-label="Cerrar el menú">
+      <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+    <nav>
+      <ul>
+        <li><a href="#invierno">El invierno 2026</a></li>
+        <li><a href="#distinto">Por qué Nuria</a></li>
+        <li><a href="#como-funciona">Cómo funciona</a></li>
+        <li><a href="#nuria">Habla con Nuria</a></li>
+        <li><a href="#ruta">Ruta y familia</a></li>
+        <li><a href="#datos">Los datos</a></li>
+        <li><a href="#probar">Pruébala</a></li>
+      </ul>
+    </nav>
+    <p class="menu-note">No es una fuente oficial. En una emergencia, llama al 911.</p>
+  </dialog>
+
+  <main>
+    <section class="hero" id="top">
+      <img class="hero-art" src="assets/img/hero-storm-1920.webp" srcset="assets/img/hero-storm-1000.webp 1000w, assets/img/hero-storm-1920.webp 1920w" sizes="(orientation: portrait) 160vh, 100vw" width="1920" height="1208" alt="Óleo de una tormenta que se acerca a una bahía; un hombre la mira sentado en la orilla." fetchpriority="high">
+      <div class="hero-inner wrap">
+        <h1 class="hero-title"><span>Que el aguacero</span> <span>no te sorprenda</span></h1>
+        <div class="hero-side">
+          <p>Nuria te dice si tu calle se puede inundar hoy, a qué hora conviene salir y por dónde ir. Hecha para Guayaquil, en el invierno de El Niño 2026.</p>
+          <a class="pill" href="#probar">Probar la app <span class="pill-dot"><svg><use href="#arrow-down"/></svg></span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="manifesto">
+      <div class="wrap">
+        <p class="statement reveal">Este invierno llueve como pocas veces. En septiembre y octubre, Guayaquil ya recibió 2 de cada 3 partes de la lluvia de un invierno normal completo. Y la temporada de lluvias, de enero a abril, todavía no empieza.</p>
+        <p class="statement reveal">Nuria mira el cielo, el río y tu calle por ti, y te dice en palabras simples qué hacer y a qué hora.</p>
+        <p class="emblem reveal"><span>Te avisa</span> <svg><use href="#nuria"/></svg> <span>antes</span></p>
+      </div>
+    </section>
+
+    <section class="split" id="invierno">
+      <div class="split-text">
+        <p class="label">El Niño 2026</p>
+        <h2 class="title">Un invierno que llegó antes y más fuerte</h2>
+        <p>El 23 de octubre, el INAMHI anunció que El Niño entra en su fase más fuerte. Los expertos esperan lluvias muy fuertes por lo menos hasta abril.</p>
+        <p>En Guayaquil no solo importa cuánto llueve. Cuando el río Guayas está alto, el agua de la calle no tiene por dónde salir.</p>
+        <a class="pill pill--lime" href="#cifras">Ver las cifras <svg><use href="#arrow-down"/></svg></a>
+      </div>
+      <figure class="split-art reveal-art">
+        <img src="assets/img/rain-sea-1600.webp" srcset="assets/img/rain-sea-900.webp 900w, assets/img/rain-sea-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 100vw" width="1600" height="1158" loading="lazy" decoding="async" alt="Óleo de un aguacero que cae sobre el mar desde una nube oscura.">
+      </figure>
+    </section>
+
+    <section class="stats" id="cifras" aria-label="Las cifras del invierno">
+      <ul class="wrap stats-grid">
+        <li class="reveal">
+          <p class="stat-figure">2 <em>de</em> 3</p>
+          <p>partes de la lluvia de un invierno normal ya cayeron en septiembre y octubre: 683,9&nbsp;mm de 1.055,6&nbsp;mm.</p>
+          <p class="stat-source">INAMHI, vía Primicias</p>
+        </li>
+        <li class="reveal">
+          <p class="stat-figure">63 <em>mm</em></p>
+          <p>en una sola hora el 26 de octubre, en la estación de la ESPOL. Lo normal para todo octubre son 5&nbsp;mm.</p>
+          <p class="stat-source">Primicias</p>
+        </li>
+        <li class="reveal">
+          <p class="stat-figure"><em>≈</em>90</p>
+          <p>sectores con agua ese mismo día. La marea alta del Guayas llegó a 4,50&nbsp;m y frenó los desagües.</p>
+          <p class="stat-source">Segura EP, vía Primicias</p>
+        </li>
+        <li class="reveal">
+          <p class="stat-figure">0</p>
+          <p>radares de lluvia en toda la costa de Ecuador. Las apps de radar no ven la lluvia de Guayaquil.</p>
+          <p class="stat-source">Primicias</p>
+        </li>
+      </ul>
+      <p class="wrap stats-note">Cifras publicadas en octubre de 2026 por el INAMHI, Primicias y El Universo.</p>
+    </section>
+
+    <section class="distinct" id="distinto">
+      <div class="wrap">
+        <p class="label">Lo que nos hace distintos</p>
+        <div class="two-col">
+          <h2 class="title title--statement reveal">Donde el radar no llega, Nuria mira el satélite.</h2>
+          <div class="two-col-side reveal">
+            <p>La costa de Ecuador no tiene radar de lluvia. Por eso RainViewer, y Amaru, que usa RainViewer, no ven los aguaceros de Guayaquil.</p>
+            <p>Nuria junta cuatro fuentes que sí funcionan aquí y te las explica en palabras simples.</p>
+            <a class="pill pill--khaki" href="#datos">De dónde salen los datos <svg><use href="#arrow-right"/></svg></a>
+          </div>
+        </div>
+        <ul class="pillars">
+          <li class="reveal">
+            <svg class="pillar-icon"><use href="#satellite"/></svg>
+            <h3>Satélite</h3>
+            <p>Una foto de las nubes cada 10&nbsp;minutos, del satélite GOES-19. Ves las nubes de tormenta antes de que llueva.</p>
+          </li>
+          <li class="reveal">
+            <svg class="pillar-icon"><use href="#tide"/></svg>
+            <h3>Marea del Guayas</h3>
+            <p>Si el río está alto, el agua de la calle se va lento. Nuria lo cruza con la lluvia para darte la mejor hora.</p>
+          </li>
+          <li class="reveal">
+            <svg class="pillar-icon"><use href="#camera"/></svg>
+            <h3>Tus vecinos</h3>
+            <p>Reportes con foto de las calles con agua, para saber lo que el pronóstico no ve.</p>
+          </li>
+          <li class="reveal">
+            <svg class="pillar-icon"><use href="#route"/></svg>
+            <h3>Ruta segura</h3>
+            <p>El camino con menos agua hasta donde vas, y la hora en que conviene salir.</p>
+          </li>
+        </ul>
+      </div>
+      <img class="distinct-art" src="assets/img/cerro-santa-ana.svg" width="1200" height="360" loading="lazy" alt="Ilustración del Cerro Santa Ana con el faro y las casas de Las Peñas, el malecón, el río Guayas y el manglar bajo un aguacero.">
+    </section>
+
+    <section class="how" id="como-funciona">
+      <div class="wrap how-grid">
+        <div class="how-intro">
+          <p class="label">Cómo funciona</p>
+          <h2 class="title">Cinco pestañas. Una sola pregunta: ¿qué hago y a qué hora?</h2>
+          <div class="levels-card">
+            <p class="label">El riesgo de tu calle, en una gota</p>
+            <ul class="levels">
+              <li style="--level: .22; --tone: var(--tranquilo)">
+                <svg class="drop" viewBox="0 0 40 48" aria-hidden="true"><path class="drop-bg" d="M20 2C20 2 4 19 4 30a16 16 0 0 0 32 0C36 19 20 2 20 2Z"/><g clip-path="url(#drop-clip)"><path class="drop-water" d="M-6 46q5.5-3.5 11 0t11 0 11 0 11 0 11 0V60H-6Z"/></g><path class="drop-line" d="M20 2C20 2 4 19 4 30a16 16 0 0 0 32 0C36 19 20 2 20 2Z"/></svg>
+                <strong>Tranquilo</strong><span>No se espera agua en la calle.</span>
+              </li>
+              <li style="--level: .46; --tone: var(--ojo)">
+                <svg class="drop" viewBox="0 0 40 48" aria-hidden="true"><path class="drop-bg" d="M20 2C20 2 4 19 4 30a16 16 0 0 0 32 0C36 19 20 2 20 2Z"/><g clip-path="url(#drop-clip)"><path class="drop-water" d="M-6 46q5.5-3.5 11 0t11 0 11 0 11 0 11 0V60H-6Z"/></g><path class="drop-line" d="M20 2C20 2 4 19 4 30a16 16 0 0 0 32 0C36 19 20 2 20 2Z"/></svg>
+                <strong>Ojo</strong><span>Puede llover fuerte.</span>
+              </li>
+              <li style="--level: .7; --tone: var(--cuidado)">
+                <svg class="drop" viewBox="0 0 40 48" aria-hidden="true"><path class="drop-bg" d="M20 2C20 2 4 19 4 30a16 16 0 0 0 32 0C36 19 20 2 20 2Z"/><g clip-path="url(#drop-clip)"><path class="drop-water" d="M-6 46q5.5-3.5 11 0t11 0 11 0 11 0 11 0V60H-6Z"/></g><path class="drop-line" d="M20 2C20 2 4 19 4 30a16 16 0 0 0 32 0C36 19 20 2 20 2Z"/></svg>
+                <strong>Cuidado</strong><span>Agua en las calles bajas.</span>
+              </li>
+              <li style="--level: .95; --tone: var(--peligro)">
+                <svg class="drop" viewBox="0 0 40 48" aria-hidden="true"><path class="drop-bg" d="M20 2C20 2 4 19 4 30a16 16 0 0 0 32 0C36 19 20 2 20 2Z"/><g clip-path="url(#drop-clip)"><path class="drop-water" d="M-6 46q5.5-3.5 11 0t11 0 11 0 11 0 11 0V60H-6Z"/></g><path class="drop-line" d="M20 2C20 2 4 19 4 30a16 16 0 0 0 32 0C36 19 20 2 20 2Z"/></svg>
+                <strong>Peligro</strong><span>Riesgo de inundación.</span>
+              </li>
+            </ul>
+            <p class="levels-note">Más agua en la gota, más riesgo. Cuatro palabras de todos los días, sin números raros.</p>
+          </div>
+        </div>
+        <ol class="tabs">
+          <li class="reveal">
+            <span class="tab-number">01</span>
+            <h3>Hoy</h3>
+            <p>Lo primero que ves al abrir la app: el riesgo en tu casa, tu trabajo y el colegio, la lluvia hora por hora, la mejor hora para salir y cómo está la marea del Guayas.</p>
+          </li>
+          <li class="reveal">
+            <span class="tab-number">02</span>
+            <h3>Mapa</h3>
+            <p>Las nubes reales del satélite sobre Guayaquil. Cada barrio con su gota y los reportes de tus vecinos.</p>
+          </li>
+          <li class="reveal">
+            <span class="tab-number">03</span>
+            <h3>Nuria</h3>
+            <p>Tu asistente. Le preguntas con tus palabras y te responde con los datos de la app, siempre con algo concreto que hacer.</p>
+          </li>
+          <li class="reveal">
+            <span class="tab-number">04</span>
+            <h3>Ruta segura</h3>
+            <p>Eliges de dónde sales y a dónde vas. Nuria busca el camino con menos agua, rodea las calles inundadas y te dice la mejor hora para salir.</p>
+          </li>
+          <li class="reveal">
+            <span class="tab-number">05</span>
+            <h3>Familia</h3>
+            <p>Dónde está cada uno, cómo está su zona y si ya confirmó que está bien. Si alguien necesita ayuda, la pide con un botón.</p>
+          </li>
+          <li class="tabs-extra reveal">
+            <span class="tab-number">Y además</span>
+            <p>Reportes con foto de tu calle. El modo Peligro, que deja en pantalla solo lo urgente. Y «Así va el invierno», para ver cuánto ha llovido frente a lo normal.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="assistant" id="nuria">
+      <div class="wrap assistant-grid">
+        <div class="assistant-text">
+          <p class="label">Tu asistente</p>
+          <h2 class="title">Pregúntale a Nuria como le preguntarías a un vecino</h2>
+          <p>Nuria es una asistente con inteligencia artificial. Responde con los datos de la app: el riesgo de tu barrio, la lluvia, la marea, tu ruta, tu familia y los reportes cercanos.</p>
+          <ul class="traits">
+            <li><svg><use href="#check"/></svg>Habla simple y va al grano.</li>
+            <li><svg><use href="#check"/></svg>No exagera ni te asusta.</li>
+            <li><svg><use href="#check"/></svg>Siempre te dice qué hacer.</li>
+            <li><svg><use href="#check"/></svg>Si algo es oficial, te manda al INAMHI o a la SNGR.</li>
+            <li><svg><use href="#check"/></svg>Te lee la respuesta en voz alta, si lo prefieres.</li>
+          </ul>
+        </div>
+        <div class="chat" aria-label="Conversación de ejemplo con Nuria">
+          <div class="chat-head">
+            <svg class="avatar"><use href="#nuria"/></svg>
+            <div><strong>Nuria</strong><span>Conversación de ejemplo</span></div>
+          </div>
+          <ol class="chat-log">
+            <li class="bubble bubble--me reveal">¿A qué hora salgo del trabajo para llegar a la Alborada?</li>
+            <li class="bubble reveal">Sal antes de las 2&nbsp;pm. De 2:30 a 4:30 viene lo más fuerte en el norte. Y a las 7:30 el río estará alto, así que el agua de la calle se irá lento.</li>
+            <li class="chat-card reveal">
+              <svg class="drop drop--small" viewBox="0 0 40 48" aria-hidden="true" style="--level: .7; --tone: var(--cuidado)"><path class="drop-bg" d="M20 2C20 2 4 19 4 30a16 16 0 0 0 32 0C36 19 20 2 20 2Z"/><g clip-path="url(#drop-clip)"><path class="drop-water" d="M-6 46q5.5-3.5 11 0t11 0 11 0 11 0 11 0V60H-6Z"/></g><path class="drop-line" d="M20 2C20 2 4 19 4 30a16 16 0 0 0 32 0C36 19 20 2 20 2Z"/></svg>
+              <div><strong>Alborada · Cuidado</strong><span>Lluvia muy fuerte de 2:30 a 4:30&nbsp;pm</span></div>
+            </li>
+            <li class="bubble bubble--me reveal">¿Y mi mamá?</li>
+            <li class="bubble reveal">Ya confirmó que está bien. Su zona, en Urdesa, está en Ojo hasta las 5&nbsp;pm.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="split split--flip" id="ruta">
+      <div class="split-text">
+        <p class="label">Ruta segura</p>
+        <h2 class="title">Llega sin cruzar el agua</h2>
+        <p>Dinos de dónde sales y a dónde vas. Nuria compara los caminos según la lluvia que viene, el río y lo que reportan tus vecinos. Si uno pasa por agua, busca otro que la rodee y te dice a qué hora salir.</p>
+        <hr>
+        <p class="label">Familia</p>
+        <h3 class="title title--small">¿Están todos bien?</h3>
+        <p>Mira en el mapa dónde está cada uno y cómo está su zona. Con un toque les preguntas a todos si están bien, y cualquiera puede pedir ayuda.</p>
+      </div>
+      <figure class="split-art reveal-art">
+        <img src="assets/img/river-light-1920.webp" srcset="assets/img/river-light-1000.webp 1000w, assets/img/river-light-1920.webp 1920w" sizes="(min-width: 900px) 50vw, 100vw" width="1920" height="1230" loading="lazy" decoding="async" alt="Óleo de un río tropical entre la selva, con la luz del sol reflejada en el agua.">
+      </figure>
+    </section>
+
+    <section class="data" id="datos">
+      <div class="wrap">
+        <p class="label">Los datos</p>
+        <div class="data-grid">
+          <div class="data-intro">
+            <h2 class="title">El cielo, el río y tu calle</h2>
+            <figure class="framed reveal">
+              <img src="assets/img/guayaquil-1846.webp" width="551" height="424" loading="lazy" decoding="async" alt="Óleo del puerto de Guayaquil en 1846, con el Cerro Santa Ana al fondo y casas flotantes en el río.">
+              <figcaption>Ernest Charton, «Puerto de Guayaquil», 1846. El Cerro Santa Ana y las casas flotantes sobre el Guayas.</figcaption>
+            </figure>
+            <p>Guayaquil siempre ha vivido con el río. Por eso Nuria no mira solo la lluvia: también mira la marea.</p>
+          </div>
+          <div>
+            <ul class="sources">
+              <li class="reveal"><span class="source-what">Nubes</span><span class="source-from">Satélite GOES-19 de la NOAA, con imágenes de la NASA</span><span class="tag tag--live">En vivo</span></li>
+              <li class="reveal"><span class="source-what">Lluvia hora por hora</span><span class="source-from">Pronóstico de Open-Meteo</span><span class="tag tag--live">En vivo</span></li>
+              <li class="reveal"><span class="source-what">Marea del Guayas</span><span class="source-from">Pronóstico de marea de Open-Meteo</span><span class="tag tag--live">En vivo</span></li>
+              <li class="reveal"><span class="source-what">Calles y caminos</span><span class="source-from">OpenStreetMap y OSRM</span><span class="tag tag--live">En vivo</span></li>
+              <li class="reveal"><span class="source-what">Terreno, reportes y familia</span><span class="source-from">Datos de ejemplo en esta versión de la app</span><span class="tag">De ejemplo</span></li>
+            </ul>
+            <p class="official reveal"><strong>Nuria no es una fuente oficial.</strong> Sigue los avisos del INAMHI y de la SNGR. En una emergencia, llama al 911.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="probar">
+      <img class="cta-art" src="assets/img/rainy-season-1920.webp" srcset="assets/img/rainy-season-1000.webp 1000w, assets/img/rainy-season-1920.webp 1920w" sizes="(orientation: portrait) 150vh, 100vw" width="1920" height="1273" loading="lazy" decoding="async" alt="Óleo de un valle tropical bajo la lluvia, con un arcoíris doble sobre las montañas y las palmeras.">
+      <div class="wrap cta-cards">
+        <div class="cta-card cta-card--title reveal">
+          <p class="label">Pruébala</p>
+          <h2 class="title">Lleva a Nuria en tu celular</h2>
+        </div>
+        <div class="cta-card reveal">
+          <p>Nuria funciona en Expo Go, en Android y en iPhone.</p>
+          <ol class="steps">
+            <li>Instala <a href="https://expo.dev/go">Expo Go</a> desde Play Store o App Store.</li>
+            <li>Abre el enlace de Nuria o escanea su código QR.</li>
+            <li>Elige tus lugares: casa, trabajo o colegio.</li>
+          </ol>
+          <div class="cta-actions">
+            <a class="pill pill--lime" data-link="app">Probar la app <span class="soon">pronto</span><svg><use href="#arrow-right"/></svg></a>
+            <a class="pill pill--ghost" data-link="demo">Ver la demo <span class="soon">pronto</span><svg><use href="#arrow-right"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-top">
+      <svg class="footer-mark"><use href="#mark"/></svg>
+      <p class="footer-note">Nuria es un proyecto para un hackathon. No es una fuente oficial: sigue los avisos del INAMHI y de la SNGR. En una emergencia, llama al 911.</p>
+      <nav class="footer-nav" aria-label="Pie de página">
+        <div>
+          <p class="label">La app</p>
+          <ul>
+            <li><a href="#como-funciona">Hoy</a></li>
+            <li><a href="#como-funciona">Mapa</a></li>
+            <li><a href="#nuria">Nuria</a></li>
+            <li><a href="#ruta">Ruta segura</a></li>
+            <li><a href="#ruta">Familia</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="label">El proyecto</p>
+          <ul>
+            <li><a href="#distinto">Por qué Nuria</a></li>
+            <li><a href="#datos">Los datos</a></li>
+            <li><a href="#probar">Pruébala</a></li>
+            <li><a href="#creditos">Créditos</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="wrap footer-credits" id="creditos">
+      <p>Pinturas de dominio público, vía Wikimedia Commons: Martin Johnson Heade, <a href="https://commons.wikimedia.org/wiki/File:Approaching_Thunder_Storm_(IA_mma_approaching_thunder_storm_11050).jpg">«Approaching Thunder Storm»</a> (1859, Metropolitan Museum of Art); John Constable, <a href="https://commons.wikimedia.org/wiki/File:Constable_-_Seascape_Study_with_Rain_Cloud.jpg">«Seascape Study with Rain Cloud»</a> (c. 1824–1828, Royal Academy of Arts); Frederic Edwin Church, <a href="https://commons.wikimedia.org/wiki/File:Frederic_Edwin_Church,_El_Rio_de_Luz_(The_River_of_Light),_1877,_NGA_50299.jpg">«El Rio de Luz»</a> (1877, National Gallery of Art) y <a href="https://commons.wikimedia.org/wiki/File:Frederic_Edwin_Church_-_Rainy_Season_in_the_Tropics_-_Google_Art_Project.jpg">«Rainy Season in the Tropics»</a> (1866, Fine Arts Museums of San Francisco); Ernest Charton, <a href="https://commons.wikimedia.org/wiki/File:Ernest_Charton_-_Puerto_de_Guayaquil.jpg">«Puerto de Guayaquil»</a> (1846). Ilustración del Cerro Santa Ana: propia. Tipografías Instrument Serif e Instrument Sans, con licencia OFL.</p>
+    </div>
+    <div class="wrap">
+      <div class="footer-legal">
+        <span>© 2026 Nuria</span>
+        <span>Hecho en Guayaquil, Ecuador</span>
+      </div>
+    </div>
+    <p class="footer-word" aria-hidden="true">Nuria</p>
+  </footer>
+</body>
+</html>
