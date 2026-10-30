@@ -1,6 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <defs><clipPath id="d"><path d="M32 10s-14 15-14 24.5a14 14 0 0 0 28 0C46 25 32 10 32 10Z"/></clipPath></defs>
+  <defs><mask id="eye"><rect width="64" height="64" fill="#fff"/><circle cx="21" cy="29.5" r="2.8" fill="#000"/></mask></defs>
   <rect width="64" height="64" rx="14" fill="#173f25"/>
-  <path clip-path="url(#d)" d="M14 36q4.5-3 9 0t9 0 9 0 9 0V52H14Z" fill="#d9f35b"/>
-  <path d="M32 10s-14 15-14 24.5a14 14 0 0 0 28 0C46 25 32 10 32 10Z" fill="none" stroke="#ede5cc" stroke-width="2.6"/>
+  <g transform="translate(7 3)" mask="url(#eye)">
+    <path d="M17 6S4 21 4 32.5a13 13 0 0 0 26 0C30 21 17 6 17 6Z" fill="#ede5cc"/>
+    <path d="M16 11.5Q10.5 6.5 4.5 7q5 3.2 7.6 9.8Z" fill="#d9f35b"/>
+    <path d="M28.6 28 51 37.4 28 34Z" fill="#ede5cc"/>
+  </g>
 </svg>
